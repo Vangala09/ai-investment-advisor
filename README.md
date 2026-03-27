@@ -12,38 +12,43 @@ Frontend (HTML/CSS/JS)  <-->  FastAPI Backend  <-->  Investment Agent (CSP + MPT
 
 ## Project Structure
 
+```
 ├── backend/
-│   ├── main.py                  # FastAPI app entry point
-│   ├── agent.py                 # Investment advisor agent + LLM integration
-│   ├── csp_solver.py            # Constraint Satisfaction Problem logic
-│   ├── mpt_calculator.py        # Modern Portfolio Theory + Covariance Matrix
-│   ├── market_data.py           # Live market data fetching (yfinance)
-│   ├── country_products.py      # Country-specific investment products (Python)
-│   ├── country_specific_info.json  # Country-specific products (JSON)
-│   ├── report_generator.py      # PDF report generation (ReportLab)
-│   ├── models.py                # Pydantic models for request/response
-│   └── requirements.txt         # Python dependencies
+│   ├── main.py                      # FastAPI app entry point
+│   ├── agent.py                    # Investment advisor agent + LLM integration
+│   ├── csp_solver.py               # Constraint Satisfaction Problem logic
+│   ├── mpt_calculator.py           # Modern Portfolio Theory + covariance matrix
+│   ├── market_data.py              # Live market data fetching (yfinance)
+│   ├── country_products.py         # Country-specific investment products logic
+│   ├── country_specific_info.json  # Country-specific product dataset
+│   ├── report_generator.py         # PDF report generation (ReportLab)
+│   ├── models.py                   # Pydantic request/response schemas
+│   └── requirements.txt            # Python dependencies
+│
 ├── frontend/
-│   ├── index.html               # Main webpage
-│   ├── style.css                # Styling
-│   └── app.js                   # JS to call the API and render results
-├── .env.example                 # Environment variable template
-├── REPORT.md                    # Comprehensive technical report
-├── PRESENTATION.md              # 5-slide presentation
-└── README.md
+│   ├── index.html                  # Main web interface
+│   ├── style.css                   # UI styling
+│   └── app.js                     # API integration + frontend logic
+│
+├── .env.example                    # Environment variable template
+├── REPORT.md                       # Detailed technical documentation
+├── PRESENTATION.md                 # 5-slide project summary
+└── README.md                       # Project overview
+```
+
 
 ---
 ## Tech Stack
 
 | Layer                     | Technology                           | Purpose                                                                     |
 | ------------------------- | ------------------------------------ | --------------------------------------------------------------------------- |
-| ⚙️ Backend API            | FastAPI + Uvicorn                    | High-performance API for handling requests and serving ML outputs           |
-| 📊 Portfolio Optimization | python-constraint (CSP), NumPy (MPT) | Constraint-based portfolio selection + Modern Portfolio Theory calculations |
-| 📈 Market Data            | yfinance (Yahoo Finance)             | Fetches real-time and historical stock market data                          |
-| 🤖 AI / LLM Agent         | OpenAI GPT-4o-mini (with fallback)   | Generates investment insights and explanations                              |
-| 📄 Reporting              | ReportLab                            | Generates downloadable PDF investment reports                               |
-| 🎨 Frontend               | HTML5, CSS3, Vanilla JavaScript      | Lightweight and responsive user interface                                   |
-| 📉 Data Visualization     | Chart.js                             | Interactive charts for portfolio performance 
+|  Backend API            | FastAPI + Uvicorn                    | High-performance API for handling requests and serving ML outputs           |
+|  Portfolio Optimization | python-constraint (CSP), NumPy (MPT) | Constraint-based portfolio selection + Modern Portfolio Theory calculations |
+|  Market Data            | yfinance (Yahoo Finance)             | Fetches real-time and historical stock market data                          |
+|  AI / LLM Agent         | OpenAI GPT-4o-mini (with fallback)   | Generates investment insights and explanations                              |
+|  Reporting              | ReportLab                            | Generates downloadable PDF investment reports                               |
+|  Frontend               | HTML5, CSS3, Vanilla JavaScript      | Lightweight and responsive user interface                                   |
+|  Data Visualization     | Chart.js                             | Interactive charts for portfolio performance 
 
 ---
 ## How to Run Locally
