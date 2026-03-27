@@ -74,5 +74,6 @@ This project demonstrates how AI can be applied in finance to:
 ## Author
 
 **Reshma Vangala**
+
 **Viren**
 
